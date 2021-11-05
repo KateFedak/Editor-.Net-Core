@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "editro", "editro\editro.csproj", "{3D9F1D67-F2B1-4EDD-9440-4029CE97F56E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingDll", "TestingDll\TestingDll.csproj", "{7D28A425-2DEB-424F-BF0B-24E2CDE0FC0E}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D9F1D67-F2B1-4EDD-9440-4029CE97F56E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D9F1D67-F2B1-4EDD-9440-4029CE97F56E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D9F1D67-F2B1-4EDD-9440-4029CE97F56E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D9F1D67-F2B1-4EDD-9440-4029CE97F56E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D28A425-2DEB-424F-BF0B-24E2CDE0FC0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D28A425-2DEB-424F-BF0B-24E2CDE0FC0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D28A425-2DEB-424F-BF0B-24E2CDE0FC0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D28A425-2DEB-424F-BF0B-24E2CDE0FC0E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
