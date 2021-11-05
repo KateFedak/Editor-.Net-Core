@@ -4695,11 +4695,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kateryna.fedak\\Editor-.Net-Core\\editro\\editro.csproj",
+      "projectUniqueName": "C:\\Users\\kateryna.fedak\\Source\\Repos\\KateFedak\\Editor.NetCore\\editro\\editro.csproj",
       "projectName": "editro",
-      "projectPath": "C:\\Users\\kateryna.fedak\\Editor-.Net-Core\\editro\\editro.csproj",
+      "projectPath": "C:\\Users\\kateryna.fedak\\Source\\Repos\\KateFedak\\Editor.NetCore\\editro\\editro.csproj",
       "packagesPath": "C:\\Users\\kateryna.fedak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kateryna.fedak\\Editor-.Net-Core\\editro\\obj\\",
+      "outputPath": "C:\\Users\\kateryna.fedak\\Source\\Repos\\KateFedak\\Editor.NetCore\\editro\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

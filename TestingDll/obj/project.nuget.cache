@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VdO8j+e7viMrxwHI9t3Q91rRzOrrxo6JORPMIIAApXwNQToN98r+fbVHcogs4xSd/WiLFKUvYgClLLe0EGq4lg==",
+  "dgSpecHash": "iPXDp7mne77vSd4hC87S0RQ4RVRqaFhpcPeA+7+D7r8TZqfSSpQHgSBZB7QIoJ9OdQ0kInuVrrC5Dn+N/vfnVg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kateryna.fedak\\Editor-.Net-Core\\TestingDll\\TestingDll.csproj",
+  "projectFilePath": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\TestingDll\\TestingDll.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kateryna.fedak\\.nuget\\packages\\microsoft.aspnetcore.mvc.testing\\3.0.0\\microsoft.aspnetcore.mvc.testing.3.0.0.nupkg.sha512",
     "C:\\Users\\kateryna.fedak\\.nuget\\packages\\microsoft.aspnetcore.testhost\\3.0.0\\microsoft.aspnetcore.testhost.3.0.0.nupkg.sha512",

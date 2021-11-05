@@ -19,22 +19,28 @@ namespace editro
             file.Add(fileName, string.Empty);
 
             var filePath = new FileInfo(fileName).FullName;
-            var t=File.ReadAllText(filePath);
-            using (StreamReader sw = new StreamReader(@"C:\Users\kateryna.fedak\Editor-.Net-Core\TestingDll\bin\Debug\netcoreapp3.1\file.txt"))
+            using (StreamReader sw = new StreamReader(filePath))
             {
-                file[fileName] += sw.ReadLine();
+                while (sw.ReadLine() != null)
+                {
+                    file[fileName] += sw.ReadLine()+"\n";
+                }
             }
         }
 
         public string[] GetFileNameInStorage()
         {
-            var t = file.Keys.ToString().Split();
-            throw new NotImplementedException();
+            var keys = file.Keys;
+            var names = new string[keys.Count];
+            keys.CopyTo(names, 0);
+            return names;
         }
 
         public int FindAndReplace(string fileName, string searchText, string replaceTet)
         {
-            throw new NotImplementedException();
+           var count= file[fileName];
+            
+            return 0;
         }
 
         public string[] SearchParagraphs(string fileName, string searchText)

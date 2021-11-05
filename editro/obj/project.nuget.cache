@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rda1duQPXJ04VLDe937lgnrrF5urNz3vRy5tWzjcjA6VeOf1VEEDBG0qvvOvBtGRccVvQAwqPy8AFmu8a3QzXg==",
+  "dgSpecHash": "t34wQysfKjww0MYlGb4sl66PuDH+hBatZF2B+yHGA0RyDz9tUI6ORggxTsJPB4uXWdgym6db0FyMwpH8gI+LoQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kateryna.fedak\\Editor-.Net-Core\\editro\\editro.csproj",
+  "projectFilePath": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\editro\\editro.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kateryna.fedak\\.nuget\\packages\\microsoft.aspnetcore.mvc.testing\\3.0.0\\microsoft.aspnetcore.mvc.testing.3.0.0.nupkg.sha512",
     "C:\\Users\\kateryna.fedak\\.nuget\\packages\\microsoft.aspnetcore.testhost\\3.0.0\\microsoft.aspnetcore.testhost.3.0.0.nupkg.sha512",

@@ -4711,11 +4711,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kateryna.fedak\\Editor-.Net-Core\\TestingDll\\TestingDll.csproj",
+      "projectUniqueName": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\TestingDll\\TestingDll.csproj",
       "projectName": "TestingDll",
-      "projectPath": "C:\\Users\\kateryna.fedak\\Editor-.Net-Core\\TestingDll\\TestingDll.csproj",
+      "projectPath": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\TestingDll\\TestingDll.csproj",
       "packagesPath": "C:\\Users\\kateryna.fedak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kateryna.fedak\\Editor-.Net-Core\\TestingDll\\obj\\",
+      "outputPath": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\TestingDll\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4735,8 +4735,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\kateryna.fedak\\Editor-.Net-Core\\editro\\editro.csproj": {
-              "projectPath": "C:\\Users\\kateryna.fedak\\Editor-.Net-Core\\editro\\editro.csproj"
+            "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\editro\\editro.csproj": {
+              "projectPath": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\editro\\editro.csproj"
             }
           }
         }
