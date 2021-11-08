@@ -4,11 +4,12 @@ using System.Text;
 
 namespace editor.dll
 {
-  public  interface IFileWrapper
+    public interface IFileWrapper
     {
         string ReadDataFromFile(string filePath);
         bool CheckFileExists(string filePath);
         void CopyToFile(string filePath, string destFile);
-        public void WriteInFile(string filePath, string information);
+        void WriteInFile(string filePath, string information);
+        void Delete(string path);
     }
 }

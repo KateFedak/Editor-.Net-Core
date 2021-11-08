@@ -21,8 +21,9 @@ namespace editor.dll
 
             if (fileWrapper.CheckFileExists(outputPath))
             {
-                outputPath = $@"{pathToStorage}\{"Next" + inputFileInfo.Name}";
+                fileWrapper.Delete(outputPath);
             }
+
             fileWrapper.CopyToFile(filePath, outputPath);
         }
 

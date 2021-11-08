@@ -22,6 +22,11 @@ namespace editor.dll
             return File.ReadAllText(filePath);
         }
 
+        public void Delete(string path)
+        {
+            File.Delete(path);
+        }
+
         public void WriteInFile(string filePath,string information)
         {
             File.WriteAllText(filePath, information);
