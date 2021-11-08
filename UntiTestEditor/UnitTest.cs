@@ -34,6 +34,19 @@ namespace UntiTestEditor
         }
 
 
+        [Test]
+        public void DeleteExistFileInStorage()
+        {
+            //arrange
+            FolderStorage folderStorage = new FolderStorage(fileMock.Object, path);
+            fileMock.Setup(s => s.CheckFileExists($@"{path}\test")).Returns(true);
+
+            //act
+            folderStorage.CopyFileToStorage("test");
+
+            //assert
+            fileMock.Verify(it => it.Delete($@"{path}\test"),Times.Once);
+        }
 
 
     }
