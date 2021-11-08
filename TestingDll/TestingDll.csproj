@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\editro\editro.csproj" />
+    <ProjectReference Include="..\editror.dll\editor.dll.csproj" />
   </ItemGroup>
 
 </Project>

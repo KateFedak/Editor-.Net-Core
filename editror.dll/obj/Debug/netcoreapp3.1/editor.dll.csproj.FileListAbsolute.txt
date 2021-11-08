@@ -1,0 +1,10 @@
+C:\Users\kateryna.fedak\source\repos\KateFedak\Editor.NetCore\editror.dll\bin\Debug\netcoreapp3.1\editor.dll.deps.json
+C:\Users\kateryna.fedak\source\repos\KateFedak\Editor.NetCore\editror.dll\bin\Debug\netcoreapp3.1\editor.dll.dll
+C:\Users\kateryna.fedak\source\repos\KateFedak\Editor.NetCore\editror.dll\bin\Debug\netcoreapp3.1\editor.dll.pdb
+C:\Users\kateryna.fedak\source\repos\KateFedak\Editor.NetCore\editror.dll\obj\Debug\netcoreapp3.1\editor.dll.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kateryna.fedak\source\repos\KateFedak\Editor.NetCore\editror.dll\obj\Debug\netcoreapp3.1\editor.dll.AssemblyInfoInputs.cache
+C:\Users\kateryna.fedak\source\repos\KateFedak\Editor.NetCore\editror.dll\obj\Debug\netcoreapp3.1\editor.dll.AssemblyInfo.cs
+C:\Users\kateryna.fedak\source\repos\KateFedak\Editor.NetCore\editror.dll\obj\Debug\netcoreapp3.1\editor.dll.csproj.CoreCompileInputs.cache
+C:\Users\kateryna.fedak\source\repos\KateFedak\Editor.NetCore\editror.dll\obj\Debug\netcoreapp3.1\editor.dll.dll
+C:\Users\kateryna.fedak\source\repos\KateFedak\Editor.NetCore\editror.dll\obj\Debug\netcoreapp3.1\editor.dll.pdb
+C:\Users\kateryna.fedak\source\repos\KateFedak\Editor.NetCore\editror.dll\obj\Debug\netcoreapp3.1\editor.dll.csproj.AssemblyReference.cache

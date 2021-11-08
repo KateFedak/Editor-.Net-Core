@@ -18,3 +18,4 @@ C:\Users\kateryna.fedak\source\repos\KateFedak\Editor.NetCore\WebEditor\obj\Debu
 C:\Users\kateryna.fedak\source\repos\KateFedak\Editor.NetCore\WebEditor\obj\Debug\netcoreapp3.1\WebEditor.dll
 C:\Users\kateryna.fedak\source\repos\KateFedak\Editor.NetCore\WebEditor\obj\Debug\netcoreapp3.1\WebEditor.pdb
 C:\Users\kateryna.fedak\source\repos\KateFedak\Editor.NetCore\WebEditor\obj\Debug\netcoreapp3.1\WebEditor.genruntimeconfig.cache
+C:\Users\kateryna.fedak\source\repos\KateFedak\Editor.NetCore\WebEditor\obj\Debug\netcoreapp3.1\WebEditor.csproj.AssemblyReference.cache

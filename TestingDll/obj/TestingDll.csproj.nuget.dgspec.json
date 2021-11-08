@@ -4,14 +4,14 @@
     "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\TestingDll\\TestingDll.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\editro\\editro.csproj": {
+    "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\editror.dll\\editor.dll.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\editro\\editro.csproj",
-        "projectName": "editro",
-        "projectPath": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\editro\\editro.csproj",
+        "projectUniqueName": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\editror.dll\\editor.dll.csproj",
+        "projectName": "editor.dll",
+        "projectPath": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\editror.dll\\editor.dll.csproj",
         "packagesPath": "C:\\Users\\kateryna.fedak\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\editro\\obj\\",
+        "outputPath": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\editror.dll\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -42,16 +42,6 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "dependencies": {
-            "Microsoft.AspNetCore.Mvc.Testing": {
-              "target": "Package",
-              "version": "[3.0.0, )"
-            },
-            "Microsoft.NET.Test.Sdk": {
-              "target": "Package",
-              "version": "[17.0.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -98,8 +88,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\editro\\editro.csproj": {
-                "projectPath": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\editro\\editro.csproj"
+              "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\editror.dll\\editor.dll.csproj": {
+                "projectPath": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\editror.dll\\editor.dll.csproj"
               }
             }
           }
