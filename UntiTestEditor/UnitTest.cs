@@ -9,45 +9,53 @@ namespace UntiTestEditor
     public class Tests
     {
         private Mock<IFileWrapper> fileMock;
+        private Mock<IStorage> folderMock;
+
         private string path;
 
         [SetUp]
         public void Initialize()
         {
             fileMock = new Mock<IFileWrapper>();
+            folderMock = new Mock<IStorage>();
             path = "testpath";
-
         }
 
         [Test]
-        public void CopyFileToStorage()
+        public void FileExists()
         {
             //arrange
-            FolderStorage folderStorage = new FolderStorage(fileMock.Object,path);
+            fileMock.Setup(s => s.CheckFileExists(path)).Returns(true);
 
-            //act
-            folderStorage.CopyFileToStorage("test");
-
-            //assert
-           
-            fileMock.Verify(it => it.CopyToFile("test",$@"{path}\test"), Times.Once);
+            //assert&&act
+            Assert.IsTrue(fileMock.Object.CheckFileExists(path));
         }
-
 
         [Test]
-        public void DeleteExistFileInStorage()
+        public void ReadFromFile()
         {
             //arrange
-            FolderStorage folderStorage = new FolderStorage(fileMock.Object, path);
-            fileMock.Setup(s => s.CheckFileExists($@"{path}\test")).Returns(true);
+            fileMock.Setup(s => s.ReadDataFromFile(path)).Returns("testing");
 
-            //act
-            folderStorage.CopyFileToStorage("test");
-
-            //assert
-            fileMock.Verify(it => it.Delete($@"{path}\test"),Times.Once);
+            //assert&&act
+            Assert.NotNull(fileMock.Object.ReadDataFromFile(path));
+            Assert.AreEqual(fileMock.Object.ReadDataFromFile(path), "testing");
         }
 
-
+        [Test]
+        public void GetFileNameInStorage()
+        {
+            //arrange
+            folderMock.Setup(s => s.GetFileNameInStorage()).Returns(
+                    new string[2]
+                    {
+                        "test1",
+                        "test2"
+                    });
+            //assert&&act
+            Assert.NotNull(folderMock.Object.GetFileNameInStorage());
+            Assert.IsTrue(folderMock.Object.GetFileNameInStorage().Length == 2);
+            Assert.IsTrue(folderMock.Object.GetFileNameInStorage()[0].Contains("test1"));
+        }
     }
 }

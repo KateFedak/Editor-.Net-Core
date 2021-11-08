@@ -5144,23 +5144,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kateryna.fedak\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\katef\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\IntegrationTest\\IntegrationTest.csproj",
+      "projectUniqueName": "C:\\Users\\katef\\Source\\Repos\\KateFedak\\Editor.NetCore\\IntegrationTest\\IntegrationTest.csproj",
       "projectName": "IntegrationTest",
-      "projectPath": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\IntegrationTest\\IntegrationTest.csproj",
-      "packagesPath": "C:\\Users\\kateryna.fedak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\IntegrationTest\\obj\\",
+      "projectPath": "C:\\Users\\katef\\Source\\Repos\\KateFedak\\Editor.NetCore\\IntegrationTest\\IntegrationTest.csproj",
+      "packagesPath": "C:\\Users\\katef\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\katef\\Source\\Repos\\KateFedak\\Editor.NetCore\\IntegrationTest\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\kateryna.fedak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\katef\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5174,8 +5170,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\editror.dll\\editor.dll.csproj": {
-              "projectPath": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\editror.dll\\editor.dll.csproj"
+            "C:\\Users\\katef\\Source\\Repos\\KateFedak\\Editor.NetCore\\editror.dll\\editor.dll.csproj": {
+              "projectPath": "C:\\Users\\katef\\Source\\Repos\\KateFedak\\Editor.NetCore\\editror.dll\\editor.dll.csproj"
             }
           }
         }
@@ -5226,7 +5222,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
