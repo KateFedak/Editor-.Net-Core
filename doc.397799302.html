@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="C:\Users\kateryna.fedak\AppData\Roaming\DocPreview\1.4.1.0\css/ContentsMerged.css" />
+    <title>Class GenericClass</title>
+</head>
+<body><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Class</div>
+        <div id="Contents" />
+
+Class <span class="Code">FolderStorage</span>
+ Class which implements from IStorage interface
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\kateryna.fedak\AppData\Roaming\DocPreview\1.4.1.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public class FolderStorage : IStorage</pre></td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+<span class="Code">CopyFileToStorage</span> copy content of file to another file
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\kateryna.fedak\AppData\Roaming\DocPreview\1.4.1.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public void CopyFileToStorage(string filePath)</pre></td></tr></tbody></table>
+
+<div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>filePath</div><div class='ParameterCommentContainer'>
+The path of file which you want to copy
+</div>
+
+
+
+
+
+<div id='SectionHeader1' class='SectionHeader'>
+   <img id='SectionExpanderImg1' src='C:\Users\kateryna.fedak\AppData\Roaming\DocPreview\1.4.1.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
+   <span class='SectionHeader'>
+       <span class='ArrowCursor'>
+       Exceptions
+       </span>
+   </span>
+</div>
+<div id='SectionContainerDiv1' class='SectionContainer'>
+<table class='MembersTable'>
+<col width='25%' />
+<col width='75%' />
+<tr>
+<th>Exception</th>
+<th>Condition</th></tr>
+<tr>
+<td><span class='PseudoLink'>FileNotFoundException</span></td>
+<td>
+ Thrown when file is not exsists
+ </td>
+</tr>
+</table
+</div>
+</div>
+
+
+
+<div id='SectionHeader1' class='SectionHeader'>
+   <img id='SectionExpanderImg1' src='C:\Users\kateryna.fedak\AppData\Roaming\DocPreview\1.4.1.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
+   <span class='SectionHeader'>
+       <span class='ArrowCursor'>
+       Examples
+       </span>
+   </span>
+</div>
+<div id='SectionContainerDiv1' class='SectionContainer'>
+<table class="ExampleCodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre>
+CopyFileToStorage("some path");
+ </pre></td></tr></table>
+</div>
+</div>
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+<span class="Code">GetFileNameInStorage</span> get all files from storage
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\kateryna.fedak\AppData\Roaming\DocPreview\1.4.1.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public string[] GetFileNameInStorage()</pre></td></tr></tbody></table>
+
+
+<div class='CommentHeader'>Return Value</div>
+<div class='ParameterCommentContainer'>
+Array of string, which contains names of files in storage
+</div>
+
+
+
+
+
+
+<div id='SectionHeader1' class='SectionHeader'>
+   <img id='SectionExpanderImg1' src='C:\Users\kateryna.fedak\AppData\Roaming\DocPreview\1.4.1.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
+   <span class='SectionHeader'>
+       <span class='ArrowCursor'>
+       Examples
+       </span>
+   </span>
+</div>
+<div id='SectionContainerDiv1' class='SectionContainer'>
+<table class="ExampleCodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre>
+var names=GetFileNameInStorage();
+ </pre></td></tr></table>
+</div>
+</div>
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+<span class="Code">FindAndReplace</span> Find some text by input parameter searchText and replace to replaceText in file
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\kateryna.fedak\AppData\Roaming\DocPreview\1.4.1.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public int FindAndReplace(string fileName, string searchText, string replaceText)</pre></td></tr></tbody></table>
+
+<div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>fileName</div><div class='ParameterCommentContainer'>
+The name of file in which you want to replace
+</div>
+<div class='CommentParameterName'>searchText</div><div class='ParameterCommentContainer'>
+The text which you want to replace
+</div>
+<div class='CommentParameterName'>replaceText</div><div class='ParameterCommentContainer'>
+To replacement text
+</div>
+
+<div class='CommentHeader'>Return Value</div>
+<div class='ParameterCommentContainer'>
+number of replacements
+</div>
+
+
+
+
+<div id='SectionHeader1' class='SectionHeader'>
+   <img id='SectionExpanderImg1' src='C:\Users\kateryna.fedak\AppData\Roaming\DocPreview\1.4.1.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
+   <span class='SectionHeader'>
+       <span class='ArrowCursor'>
+       Exceptions
+       </span>
+   </span>
+</div>
+<div id='SectionContainerDiv1' class='SectionContainer'>
+<table class='MembersTable'>
+<col width='25%' />
+<col width='75%' />
+<tr>
+<th>Exception</th>
+<th>Condition</th></tr>
+<tr>
+<td><span class='PseudoLink'>FileNotFoundException</span></td>
+<td>
+ Thrown when file is not exsists
+ </td>
+</tr>
+</table
+</div>
+</div>
+
+
+
+<div id='SectionHeader1' class='SectionHeader'>
+   <img id='SectionExpanderImg1' src='C:\Users\kateryna.fedak\AppData\Roaming\DocPreview\1.4.1.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
+   <span class='SectionHeader'>
+       <span class='ArrowCursor'>
+       Examples
+       </span>
+   </span>
+</div>
+<div id='SectionContainerDiv1' class='SectionContainer'>
+<table class="ExampleCodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre>
+var count = FindAndReplace("testinput.txt", "mom", "sis");
+ </pre></td></tr></table>
+</div>
+</div>
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+<span class="Code">SearchParagraphs</span> find all paragraphs, which contains special text
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\kateryna.fedak\AppData\Roaming\DocPreview\1.4.1.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public string[] SearchParagraphs(string fileName, string searchText)</pre></td></tr></tbody></table>
+
+<div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>fileName</div><div class='ParameterCommentContainer'>
+The name of file in which you want to replace
+</div>
+<div class='CommentParameterName'>searchText</div><div class='ParameterCommentContainer'>
+The text which you want to be in paragraphs
+</div>
+
+<div class='CommentHeader'>Return Value</div>
+<div class='ParameterCommentContainer'>
+Array of paragraphs
+</div>
+
+
+
+
+<div id='SectionHeader1' class='SectionHeader'>
+   <img id='SectionExpanderImg1' src='C:\Users\kateryna.fedak\AppData\Roaming\DocPreview\1.4.1.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
+   <span class='SectionHeader'>
+       <span class='ArrowCursor'>
+       Exceptions
+       </span>
+   </span>
+</div>
+<div id='SectionContainerDiv1' class='SectionContainer'>
+<table class='MembersTable'>
+<col width='25%' />
+<col width='75%' />
+<tr>
+<th>Exception</th>
+<th>Condition</th></tr>
+<tr>
+<td><span class='PseudoLink'>FileNotFoundException</span></td>
+<td>
+ Thrown when file is not exsists
+ </td>
+</tr>
+</table
+</div>
+</div>
+
+
+
+<div id='SectionHeader1' class='SectionHeader'>
+   <img id='SectionExpanderImg1' src='C:\Users\kateryna.fedak\AppData\Roaming\DocPreview\1.4.1.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
+   <span class='SectionHeader'>
+       <span class='ArrowCursor'>
+       Examples
+       </span>
+   </span>
+</div>
+<div id='SectionContainerDiv1' class='SectionContainer'>
+<table class="ExampleCodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre>
+var paragraps = folderStorage.SearchParagraphs("testinput2.txt", "I went to school");
+ </pre></td></tr></table>
+</div>
+</div>
+
+
+    </div>
+</p>
+</body>
+</html>
