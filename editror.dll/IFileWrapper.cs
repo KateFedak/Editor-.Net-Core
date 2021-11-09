@@ -11,5 +11,6 @@ namespace editor.dll
         void CopyToFile(string filePath, string destFile);
         void WriteInFile(string filePath, string information);
         void Delete(string path);
+        string Replace(string text, string searchText, string replaceText);
     }
 }

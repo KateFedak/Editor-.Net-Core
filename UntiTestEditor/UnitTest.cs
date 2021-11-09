@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 using editor.dll;
 using Moq;
@@ -8,54 +9,110 @@ namespace UntiTestEditor
     [TestFixture]
     public class Tests
     {
-        private Mock<IFileWrapper> fileMock;
-        private Mock<IStorage> folderMock;
 
+        private Mock<IFileWrapper> fileMock;
+        private FolderStorage folderStorage;
         private string path;
 
         [SetUp]
         public void Initialize()
         {
             fileMock = new Mock<IFileWrapper>();
-            folderMock = new Mock<IStorage>();
             path = "testpath";
+            folderStorage = new FolderStorage(fileMock.Object, path);
         }
 
         [Test]
-        public void FileExists()
+        public void CopyFileToStorageIfFileExistAndNewInStorage()
         {
             //arrange
             fileMock.Setup(s => s.CheckFileExists(path)).Returns(true);
+            //act
+            folderStorage.CopyFileToStorage(path);
 
-            //assert&&act
-            Assert.IsTrue(fileMock.Object.CheckFileExists(path));
+            //assert
+            fileMock.Verify(it => it.CopyToFile(path, @$"{path}\{path}"), Times.Once);
         }
 
         [Test]
-        public void ReadFromFile()
+        public void CopyFileToStorageIfFileExistAndAlreadyExistInStorage()
         {
             //arrange
-            fileMock.Setup(s => s.ReadDataFromFile(path)).Returns("testing");
+            fileMock.Setup(s => s.CheckFileExists(path)).Returns(true);
+            fileMock.Setup(s => s.CheckFileExists(@$"{path}\{path}")).Returns(true);
 
-            //assert&&act
-            Assert.NotNull(fileMock.Object.ReadDataFromFile(path));
-            Assert.AreEqual(fileMock.Object.ReadDataFromFile(path), "testing");
+            //act
+            folderStorage.CopyFileToStorage(path);
+
+            //assert
+            fileMock.Verify(it => it.Delete($@"{path}\{path}"), Times.Once);
+            fileMock.Verify(it => it.CopyToFile(path, @$"{path}\{path}"), Times.Once);
         }
 
         [Test]
-        public void GetFileNameInStorage()
+        public void CopyFileToStorageIfFileNotExist()
         {
             //arrange
-            folderMock.Setup(s => s.GetFileNameInStorage()).Returns(
-                    new string[2]
-                    {
-                        "test1",
-                        "test2"
-                    });
+            fileMock.Setup(s => s.CheckFileExists(path)).Throws<FileNotFoundException>();
+
             //assert&&act
-            Assert.NotNull(folderMock.Object.GetFileNameInStorage());
-            Assert.IsTrue(folderMock.Object.GetFileNameInStorage().Length == 2);
-            Assert.IsTrue(folderMock.Object.GetFileNameInStorage()[0].Contains("test1"));
+            Assert.Throws<FileNotFoundException>(() => folderStorage.CopyFileToStorage(path));
+        }
+
+
+
+        [Test]
+        public void FindAndReplaceIfFileNotExist()
+        {
+            //arrange
+            fileMock.Setup(s => s.CheckFileExists($@"{path}\{path}")).Returns(false);
+
+            //assert&&act
+            Assert.Throws<FileNotFoundException>(() => folderStorage.FindAndReplace(path, "", ""));
+        }
+
+        [TestCase("", "", "", "")]
+        [TestCase("sis", "dad", "sis mom sis dad", "dad mom dad dad")]
+        public void FindAndReplaceIfFileExist(string searchText, string replaceText, string input, string output)
+        {
+            //arrange
+            fileMock.Setup(s => s.CheckFileExists($@"{path}\{path}")).Returns(true);
+            fileMock.Setup(s => s.ReadDataFromFile($@"{path}\{path}")).Returns(input);
+            fileMock.Setup(s => s.Replace(input, searchText, replaceText)).Returns(output);
+
+            //act
+            folderStorage.FindAndReplace(path, searchText, replaceText);
+
+            //assert
+            fileMock.Verify(it => it.ReadDataFromFile($@"{path}\{path}"), Times.Once);
+            fileMock.Verify(it => it.WriteInFile($@"{path}\{path}", output), Times.Once);
+
+        }
+
+        [Test]
+        public void SearchParagraphsIfFileNotExist()
+        {
+            //arrange
+            fileMock.Setup(s => s.CheckFileExists($@"{path}\{path}")).Returns(false);
+
+            //assert&&act
+            Assert.Throws<FileNotFoundException>(() => folderStorage.SearchParagraphs(path, ""));
+        }
+
+        //[TestCase("", "", new string[] { "" })]
+        [TestCase("la", " da da\n \tlala st.\nda", new string[] { "lala st." })]
+
+        public void SearchParagraphsIfFileExist(string searchText, string input, string[] expectedResult)
+        {
+            //arrange
+            fileMock.Setup(s => s.CheckFileExists(($@"{path}\{path}"))).Returns(true);
+            fileMock.Setup(s => s.ReadDataFromFile($@"{path}\{path}")).Returns(input);
+
+            //act
+            var actualResult = folderStorage.SearchParagraphs(path, searchText);
+
+            //assert
+            Assert.AreEqual(actualResult, expectedResult);
         }
     }
 }

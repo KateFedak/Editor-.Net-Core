@@ -1,3 +1,5 @@
+using System.IO;
+using System.Linq;
 using NUnit.Framework;
 using editor.dll;
 using Moq;
@@ -6,53 +8,70 @@ namespace IntegrationTest
 {
     public class Tests
     {
-        private Mock<IFileWrapper> fileMock;
         private FolderStorage folderStorage;
+        private FileWrapper fileWrapper;
         private string path;
 
         [SetUp]
         public void Initialize()
         {
-            fileMock = new Mock<IFileWrapper>();
-            folderStorage = new FolderStorage(fileMock.Object, path);
-            path = "testpath";
+            fileWrapper = new FileWrapper();
+            path = @"C:\Users\kateryna.fedak\source\repos\KateFedak\Editor.NetCore\IntegrationTest\bin";
+            folderStorage = new FolderStorage(fileWrapper,path);
         }
 
         [Test]
         public void CopyFileToStorage()
         {
+
             //act
-            folderStorage.CopyFileToStorage(path);
+            folderStorage.CopyFileToStorage( @"C:\Users\kateryna.fedak\source\repos\KateFedak\Editor.NetCore\IntegrationTest\testinput.txt");
 
             //assert
-            fileMock.Verify(it => it.CopyToFile(path, @$"\{path}"), Times.Once);
+            Assert.IsTrue(File.Exists($@"{path}\testinput.txt"));
+           // Assert.AreEqual();
         }
 
         [Test]
-        public void DeleteExistFileInStorage()
+        public void GetFileNameInStorage()
         {
             //arrange
-            fileMock.Setup(s => s.CheckFileExists($@"{path}\{path}")).Returns(true);
+            folderStorage.CopyFileToStorage( @"C:\Users\kateryna.fedak\source\repos\KateFedak\Editor.NetCore\IntegrationTest\testinput.txt");
+            folderStorage.CopyFileToStorage(@"C:\Users\kateryna.fedak\source\repos\KateFedak\Editor.NetCore\IntegrationTest\testinput2.txt");
 
             //act
-            folderStorage.CopyFileToStorage(path);
+            var names=folderStorage.GetFileNameInStorage();
 
-            //assert
-            fileMock.Verify(it => it.Delete($@"{path}\{path}"), Times.Once);
+            Assert.IsTrue(names.Length==2);
+            Assert.IsTrue(names.Contains("testinput.txt"));
+            Assert.IsTrue(names.Contains("testinput2.txt"));
         }
 
         [Test]
         public void Replace()
         {
             //arrange
-            fileMock.Setup(s => s.ReadDataFromFile(path)).Returns("mom mom dad");
-            fileMock.Object.ReadDataFromFile(path);
-            //act
+            folderStorage.CopyFileToStorage(@"C:\Users\kateryna.fedak\source\repos\KateFedak\Editor.NetCore\IntegrationTest\testinput.txt");
 
-            var count=folderStorage.FindAndReplace(path,"mom","sis");
+            //act
+            var count = folderStorage.FindAndReplace("testinput.txt", "mom", "sis");
 
             //assert
-            fileMock.Verify(it => it.WriteInFile(path,""), Times.Once);
+            Assert.AreEqual(count,2);
         }
+
+        [Test]
+        public void Paragraph()
+        {
+            //arrange
+            folderStorage.CopyFileToStorage(@"C:\Users\kateryna.fedak\source\repos\KateFedak\Editor.NetCore\IntegrationTest\testinput2.txt");
+
+            //act
+            var paragraps = folderStorage.SearchParagraphs("testinput2.txt", "I went to school");
+
+            //assert
+            Assert.AreEqual(paragraps.Length, 2);
+        }
+
     }
 }

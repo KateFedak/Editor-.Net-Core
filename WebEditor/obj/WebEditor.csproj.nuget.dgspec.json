@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\katef\\Source\\Repos\\KateFedak\\Editor.NetCore\\WebEditor\\WebEditor.csproj": {}
+    "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\WebEditor\\WebEditor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\katef\\Source\\Repos\\KateFedak\\Editor.NetCore\\WebEditor\\WebEditor.csproj": {
+    "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\WebEditor\\WebEditor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\katef\\Source\\Repos\\KateFedak\\Editor.NetCore\\WebEditor\\WebEditor.csproj",
+        "projectUniqueName": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\WebEditor\\WebEditor.csproj",
         "projectName": "WebEditor",
-        "projectPath": "C:\\Users\\katef\\Source\\Repos\\KateFedak\\Editor.NetCore\\WebEditor\\WebEditor.csproj",
-        "packagesPath": "C:\\Users\\katef\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\katef\\Source\\Repos\\KateFedak\\Editor.NetCore\\WebEditor\\obj\\",
+        "projectPath": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\WebEditor\\WebEditor.csproj",
+        "packagesPath": "C:\\Users\\kateryna.fedak\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\WebEditor\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\katef\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kateryna.fedak\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

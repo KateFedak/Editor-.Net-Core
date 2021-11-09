@@ -31,5 +31,11 @@ namespace editor.dll
         {
             File.WriteAllText(filePath, information);
         }
+
+        public string Replace(string text, string searchText, string replaceText)
+        {
+            var newText = text.Replace(searchText, replaceText);
+            return newText;
+        }
     }
 }

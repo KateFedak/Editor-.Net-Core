@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace editor.dll
 {
@@ -8,7 +10,7 @@ namespace editor.dll
         public IFileWrapper fileWrapper;
         public string pathToStorage;
 
-        public FolderStorage(IFileWrapper fileWrapper ,string path)
+        public FolderStorage(IFileWrapper fileWrapper, string path)
         {
             this.fileWrapper = fileWrapper;
             this.pathToStorage = path;
@@ -16,51 +18,77 @@ namespace editor.dll
 
         public void CopyFileToStorage(string filePath)
         {
-            var inputFileInfo = new FileInfo(filePath);
-            var outputPath = $@"{pathToStorage}\{inputFileInfo.Name}";
-
-            if (fileWrapper.CheckFileExists(outputPath))
+            if (fileWrapper.CheckFileExists(filePath))
             {
-                fileWrapper.Delete(outputPath);
-            }
+                var inputFileInfo = new FileInfo(filePath);
+              
+                var outputPath = $@"{pathToStorage}\{inputFileInfo.Name}";
 
-            fileWrapper.CopyToFile(filePath, outputPath);
+                if (fileWrapper.CheckFileExists(outputPath))
+                {
+                    fileWrapper.Delete(outputPath);
+                }
+                
+                fileWrapper.CopyToFile(filePath, outputPath);
+            }
+            else
+            {
+                throw new FileNotFoundException("Sorry, but file is not exists!");
+            }
         }
 
         public string[] GetFileNameInStorage()
         {
-            var listOfFile = Directory.GetFiles($@"{pathToStorage}\", "*.txt");
-            var names = new string[listOfFile.Length];
-
-            for (int i = 0; i < listOfFile.Length; i++)
-            {
-                names[i] = Path.GetFileName(listOfFile[i]);
-            }
-
-            return names;
+                var listOfFile = Directory.GetFiles($@"{pathToStorage}\", "*.txt"); ;
+                var names = new string[listOfFile.Length];
+                for (int i = 0; i < listOfFile.Length; i++)
+                {
+                    names[i] = Path.GetFileName(listOfFile[i]);
+                }
+                return names;
         }
 
-        public int FindAndReplace(string fileName, string searchText, string replaceTet)
+        public int FindAndReplace(string fileName, string searchText, string replaceText)
         {
             int count = 0;
-            var words = fileWrapper.ReadDataFromFile($@"{pathToStorage}\{fileName}");
 
-            foreach (var word in words.Split(new char[0]))
+            if (fileWrapper.CheckFileExists($@"{pathToStorage}\{fileName}"))
             {
-                if (word == searchText)
-                {
-                    count++;
-                }
-            }
-            words.Replace(searchText, replaceTet);
-            fileWrapper.WriteInFile($@"{pathToStorage}\{fileName}", words);
+                var text = fileWrapper.ReadDataFromFile($@"{pathToStorage}\{fileName}");
 
-            return count;
+                foreach (var word in text.Split(new char[0]))
+                {
+                    if (word == searchText)
+                    {
+                        count++;
+                    }
+                }
+
+                var newtext = fileWrapper.Replace(text,searchText, replaceText);
+                fileWrapper.WriteInFile($@"{pathToStorage}\{fileName}", newtext);
+                return count;
+            }
+            else
+            {
+                throw new FileNotFoundException("You enter the file which not exist");
+            }
         }
 
         public string[] SearchParagraphs(string fileName, string searchText)
         {
-            throw new NotImplementedException();
+            if (fileWrapper.CheckFileExists($@"{pathToStorage}\{fileName}"))
+            {
+                var text = fileWrapper.ReadDataFromFile($@"{pathToStorage}\{fileName}");
+            
+                var paragraphs = Regex.Matches(text, @"\t(.*?)\n").Select(s=>s.Value).Where(s=>s.Contains(searchText)).Select(s => s.Trim('\t').Trim('\n')).ToArray();
+
+
+                return paragraphs;
+            }
+            else
+            {
+                throw new FileNotFoundException("You enter the file which not exist");
+            }
         }
     }
 }
