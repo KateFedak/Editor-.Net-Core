@@ -4,7 +4,11 @@ using System.Text;
 
 namespace editor.dll
 {
-  public  interface IStorage
+    /// <summary>
+    /// This interface would describe all the methods in
+    /// its contract.
+    /// </summary>
+    public interface IStorage
     {
         void CopyFileToStorage(string filePath);
         string[] GetFileNameInStorage();
