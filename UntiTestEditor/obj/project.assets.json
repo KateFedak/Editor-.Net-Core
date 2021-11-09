@@ -5150,11 +5150,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\UntiTestEditor\\UntiTestEditor.csproj",
+      "projectUniqueName": "C:\\Users\\kateryna.fedak\\Desktop\\Editor.NetCore\\UntiTestEditor\\UntiTestEditor.csproj",
       "projectName": "UntiTestEditor",
-      "projectPath": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\UntiTestEditor\\UntiTestEditor.csproj",
+      "projectPath": "C:\\Users\\kateryna.fedak\\Desktop\\Editor.NetCore\\UntiTestEditor\\UntiTestEditor.csproj",
       "packagesPath": "C:\\Users\\kateryna.fedak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\UntiTestEditor\\obj\\",
+      "outputPath": "C:\\Users\\kateryna.fedak\\Desktop\\Editor.NetCore\\UntiTestEditor\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5174,8 +5174,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\editror.dll\\editor.dll.csproj": {
-              "projectPath": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\editror.dll\\editor.dll.csproj"
+            "C:\\Users\\kateryna.fedak\\Desktop\\Editor.NetCore\\editror.dll\\editor.dll.csproj": {
+              "projectPath": "C:\\Users\\kateryna.fedak\\Desktop\\Editor.NetCore\\editror.dll\\editor.dll.csproj"
             }
           }
         }

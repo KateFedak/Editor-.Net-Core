@@ -59,8 +59,6 @@ namespace UntiTestEditor
             Assert.Throws<FileNotFoundException>(() => folderStorage.CopyFileToStorage(path));
         }
 
-
-
         [Test]
         public void FindAndReplaceIfFileNotExist()
         {
@@ -86,7 +84,6 @@ namespace UntiTestEditor
             //assert
             fileMock.Verify(it => it.ReadDataFromFile($@"{path}\{path}"), Times.Once);
             fileMock.Verify(it => it.WriteInFile($@"{path}\{path}", output), Times.Once);
-
         }
 
         [Test]
@@ -99,7 +96,7 @@ namespace UntiTestEditor
             Assert.Throws<FileNotFoundException>(() => folderStorage.SearchParagraphs(path, ""));
         }
 
-        //[TestCase("", "", new string[] { "" })]
+        [TestCase("", "", new string[] { "" })]
         [TestCase("la", " da da\n \tlala st.\nda", new string[] { "lala st." })]
 
         public void SearchParagraphsIfFileExist(string searchText, string input, string[] expectedResult)

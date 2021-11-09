@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kL4j4lFIR3/mE/GVc8x4QxU1qaxIX4svwnYQ50q7WxAGALUHEWMTfDf5k3MdXZa+OwCCKaeTwZj0Bp69smHI8g==",
+  "dgSpecHash": "aKsi6YberK9XDL/5fhz5iJfwHOJCilRHCpXPd6inoe9UfUS9Po2KtZDBj7JwScX7bRs+DerzU9IMxHolcNNUWw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\UntiTestEditor\\UntiTestEditor.csproj",
+  "projectFilePath": "C:\\Users\\kateryna.fedak\\Desktop\\Editor.NetCore\\UntiTestEditor\\UntiTestEditor.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kateryna.fedak\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\kateryna.fedak\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",

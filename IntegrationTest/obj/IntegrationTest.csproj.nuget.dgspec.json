@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\IntegrationTest\\IntegrationTest.csproj": {}
+    "C:\\Users\\kateryna.fedak\\Desktop\\Editor.NetCore\\IntegrationTest\\IntegrationTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\editror.dll\\editor.dll.csproj": {
+    "C:\\Users\\kateryna.fedak\\Desktop\\Editor.NetCore\\editror.dll\\editor.dll.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\editror.dll\\editor.dll.csproj",
+        "projectUniqueName": "C:\\Users\\kateryna.fedak\\Desktop\\Editor.NetCore\\editror.dll\\editor.dll.csproj",
         "projectName": "editor.dll",
-        "projectPath": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\editror.dll\\editor.dll.csproj",
+        "projectPath": "C:\\Users\\kateryna.fedak\\Desktop\\Editor.NetCore\\editror.dll\\editor.dll.csproj",
         "packagesPath": "C:\\Users\\kateryna.fedak\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\editror.dll\\obj\\",
+        "outputPath": "C:\\Users\\kateryna.fedak\\Desktop\\Editor.NetCore\\editror.dll\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -61,14 +61,14 @@
         }
       }
     },
-    "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\IntegrationTest\\IntegrationTest.csproj": {
+    "C:\\Users\\kateryna.fedak\\Desktop\\Editor.NetCore\\IntegrationTest\\IntegrationTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\IntegrationTest\\IntegrationTest.csproj",
+        "projectUniqueName": "C:\\Users\\kateryna.fedak\\Desktop\\Editor.NetCore\\IntegrationTest\\IntegrationTest.csproj",
         "projectName": "IntegrationTest",
-        "projectPath": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\IntegrationTest\\IntegrationTest.csproj",
+        "projectPath": "C:\\Users\\kateryna.fedak\\Desktop\\Editor.NetCore\\IntegrationTest\\IntegrationTest.csproj",
         "packagesPath": "C:\\Users\\kateryna.fedak\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\IntegrationTest\\obj\\",
+        "outputPath": "C:\\Users\\kateryna.fedak\\Desktop\\Editor.NetCore\\IntegrationTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -88,8 +88,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\editror.dll\\editor.dll.csproj": {
-                "projectPath": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\editror.dll\\editor.dll.csproj"
+              "C:\\Users\\kateryna.fedak\\Desktop\\Editor.NetCore\\editror.dll\\editor.dll.csproj": {
+                "projectPath": "C:\\Users\\kateryna.fedak\\Desktop\\Editor.NetCore\\editror.dll\\editor.dll.csproj"
               }
             }
           }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5yOduW1lIWM80wH1WTunv4/9hpIjL0hhjlTKp6foTHj7ZgqsGBOvLiycTUnzjD9iol7mCZUnWA/MLoiObz4aHw==",
+  "dgSpecHash": "aLPvX6YEiJzMCnpmwtlk/fqxRpj/gFLCCGdJAWkC0Qg7SrIPOx++QJRAt8pjegAIttZ5fsnt8V8j7cjb2VAj5A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kateryna.fedak\\source\\repos\\KateFedak\\Editor.NetCore\\IntegrationTest\\IntegrationTest.csproj",
+  "projectFilePath": "C:\\Users\\kateryna.fedak\\Desktop\\Editor.NetCore\\IntegrationTest\\IntegrationTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kateryna.fedak\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\kateryna.fedak\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",

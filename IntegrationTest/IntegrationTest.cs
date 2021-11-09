@@ -11,67 +11,37 @@ namespace IntegrationTest
         private FolderStorage folderStorage;
         private FileWrapper fileWrapper;
         private string path;
+        private string pathUser= $@"{Directory.GetCurrentDirectory()}\User";
 
         [SetUp]
         public void Initialize()
         {
             fileWrapper = new FileWrapper();
-            path = @"C:\Users\kateryna.fedak\source\repos\KateFedak\Editor.NetCore\IntegrationTest\bin";
+            path = $@"{Directory.GetCurrentDirectory()}\Storage";
             folderStorage = new FolderStorage(fileWrapper,path);
         }
 
         [Test]
-        public void CopyFileToStorage()
-        {
-
-            //act
-            folderStorage.CopyFileToStorage( @"C:\Users\kateryna.fedak\source\repos\KateFedak\Editor.NetCore\IntegrationTest\testinput.txt");
-
-            //assert
-            Assert.IsTrue(File.Exists($@"{path}\testinput.txt"));
-           // Assert.AreEqual();
-        }
-
-        [Test]
-        public void GetFileNameInStorage()
+        public void HappyPath()
         {
             //arrange
-            folderStorage.CopyFileToStorage( @"C:\Users\kateryna.fedak\source\repos\KateFedak\Editor.NetCore\IntegrationTest\testinput.txt");
-            folderStorage.CopyFileToStorage(@"C:\Users\kateryna.fedak\source\repos\KateFedak\Editor.NetCore\IntegrationTest\testinput2.txt");
-
-            //act
-            var names=folderStorage.GetFileNameInStorage();
-
-            Assert.IsTrue(names.Length==2);
-            Assert.IsTrue(names.Contains("testinput.txt"));
-            Assert.IsTrue(names.Contains("testinput2.txt"));
-        }
-
-        [Test]
-        public void Replace()
-        {
-            //arrange
-            folderStorage.CopyFileToStorage(@"C:\Users\kateryna.fedak\source\repos\KateFedak\Editor.NetCore\IntegrationTest\testinput.txt");
-
-            //act
-            var count = folderStorage.FindAndReplace("testinput.txt", "mom", "sis");
-
-            //assert
-            Assert.AreEqual(count,2);
-        }
-
-        [Test]
-        public void Paragraph()
-        {
-            //arrange
-            folderStorage.CopyFileToStorage(@"C:\Users\kateryna.fedak\source\repos\KateFedak\Editor.NetCore\IntegrationTest\testinput2.txt");
+            folderStorage.CopyFileToStorage(@$"{pathUser}\testinput2.txt");
 
             //act
             var paragraps = folderStorage.SearchParagraphs("testinput2.txt", "I went to school");
+            var count = folderStorage.FindAndReplace("testinput2.txt", "I went to school","love love love");
+            var paragraphsSecond = folderStorage.SearchParagraphs("testinput2.txt", "love love love");
+            folderStorage.CopyFileToStorage(@$"{pathUser}\testinput2.txt");
+            var paragraphsLikeFirst = folderStorage.SearchParagraphs("testinput2.txt", "I went to school");
+            folderStorage.CopyFileToStorage(@$"{pathUser}\testinput.txt");
+            folderStorage.CopyFileToStorage(@$"{pathUser}\testinput.txt");
+            var nameOfFile = folderStorage.GetFileNameInStorage();
 
             //assert
-            Assert.AreEqual(paragraps.Length, 2);
+            Assert.AreEqual(paragraphsSecond.Length, count);
+            Assert.AreEqual(paragraps, paragraphsLikeFirst);
+            Assert.IsTrue(nameOfFile.Contains("testinput.txt"));
+            Assert.IsTrue(nameOfFile.Contains("testinput2.txt"));
         }
-
     }
 }
